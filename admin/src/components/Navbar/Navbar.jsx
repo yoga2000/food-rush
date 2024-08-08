@@ -7,9 +7,7 @@ import "./Navbar.css";
 const Navbar = () => {
   return (
     <div className="navbar">
-      <p className="heading">
-        FoodRush Admin <Panel></Panel>{" "}
-      </p>
+      <p className="heading">FoodRush Admin Panel</p>
       <img className="profile" src={assets.profile_image} alt="" />
     </div>
   );
