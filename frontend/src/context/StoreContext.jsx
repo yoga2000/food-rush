@@ -6,7 +6,7 @@ import { createContext, useEffect, useState } from "react";
 export const storeContext = createContext(null);
 
 const StoreContextProvider = (props) => {
-  const url = "http://localhost:4000";
+  const url = "https://food-delivery-backend-psi.vercel.app";
   const [food_list, SetFoodList] = useState([]);
   const [cartItems, setCartItems] = useState({});
   const [token, setToken] = useState("");
