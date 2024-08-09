@@ -10,6 +10,7 @@ const StoreContextProvider = (props) => {
   const [food_list, SetFoodList] = useState([]);
   const [cartItems, setCartItems] = useState({});
   const [token, setToken] = useState("");
+  axios.defaults.withCredentials = true;
 
   useEffect(() => {
     async function loadData() {

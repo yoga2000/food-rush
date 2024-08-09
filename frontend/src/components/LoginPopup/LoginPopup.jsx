@@ -20,6 +20,8 @@ const LoginPopup = ({ setShowLogin }) => {
     setData((prev) => ({ ...prev, [name]: value }));
   };
 
+  axios.defaults.withCredentials = true;
+
   const onLogin = async (e) => {
     e.preventDefault();
     let newUrl = url;
