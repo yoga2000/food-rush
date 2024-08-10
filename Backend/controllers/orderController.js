@@ -8,7 +8,7 @@ import Stripe from "stripe";
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 const placeOrder = async (req, res) => {
-  const frontend_url = "https://food-delivery-eight-azure.vercel.app";
+  const frontend_url = "https://food-rush-frontend.onrender.com";
   console.log("ji");
   console.log(req.body);
   try {
