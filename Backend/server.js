@@ -11,7 +11,8 @@ export const app = express();
 
 // List of allowed origins
 const allowedOrigins = [
-  "https://food-delivery-eight-azure.vercel.app",
+  "https://food-rush-frontend.onrender.com",
+  "https://food-rush-admin.onrender.com",
   "http://localhost:5173",
 ];
 
