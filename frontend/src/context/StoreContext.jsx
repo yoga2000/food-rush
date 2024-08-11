@@ -8,6 +8,7 @@ export const storeContext = createContext(null);
 const StoreContextProvider = (props) => {
   const url = "https://food-rush-3auu.onrender.com";
   const [food_list, SetFoodList] = useState([]);
+  const [loading, SetLoading] = useState(true);
   const [cartItems, setCartItems] = useState({});
   const [token, setToken] = useState("");
   axios.defaults.withCredentials = true;
@@ -28,8 +29,10 @@ const StoreContextProvider = (props) => {
 
     if (response.data.success) {
       SetFoodList(response.data.data);
+      SetLoading(false);
     } else {
       console.error("server error could not able to fetcj");
+      SetLoading(false);
     }
   };
 
@@ -89,6 +92,7 @@ const StoreContextProvider = (props) => {
     url,
     token,
     setToken,
+    loading,
   };
 
   return (

@@ -5,7 +5,14 @@ import { storeContext } from "../../context/StoreContext";
 import FoodItem from "../FoodItem/FoodItem";
 
 const FoodDisplay = ({ category }) => {
-  const { food_list } = useContext(storeContext);
+  const { food_list, loading } = useContext(storeContext);
+  if (loading) {
+    return (
+      <h1 style={{ color: "blue", textAlign: "center" }}>
+        Loading the top dishes please wait...
+      </h1>
+    );
+  }
   return (
     <div className="food-display" id="food-display">
       <h2>Top dishes near you</h2>
